@@ -1,17 +1,55 @@
-# Tauri + Vue + TypeScript
+# AsanMCL
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[简体中文](./README.md)
 
-## Recommended IDE Setup
+高性能，现代化的MC启动器
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+> 请注意：当前为实验性阶段，很有可能会遇到如下情况：
+> 1. 依赖不完全导致崩溃
+> 2. 编译时大量warn
+> 3. 大量冗余沉积代码和引用
+> 4. 不明所以的功能项
 
-## Type Support For `.vue` Imports in TS
+## 技术栈
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+语言和框架：
+- 前端：vue3 + vite + typescript
+- 后端：rust + tauri2
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+包管理器：
+- 前端：npm + pnpm
+- 后端：rustup + cargo
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+## 如何使用
 
+> 还没有公开发布的 Release 包，欢迎大佬来 Pr
+
+1. 从 [Github Release](https://github.com/Asankilp/AsanMCL/releases) 下载适配您设备的安装包或 `AppImage`
+
+2. 启动并安装到本地（`AppImage` 可以忽略这一步）
+
+3. 从应用列表或文件夹启动，然后就可以使用了
+
+## 如何贡献
+
+1. fork 当前仓库
+
+2. 使用 `git clone` 命令从 `github` 中您所 fork 的仓库克隆
+
+3. 使用您钟爱的编辑工具打开克隆的仓库
+
+4. 编辑代码或是其他内容
+
+安装环境
+```bash
+cd AsanMCL # 打开文件夹 
+npm install
+npm run tauri dev
+```
+
+> 在编辑代码前建议使用 `npm install` 命令获取当前所需要的依赖，同时你需要安装 [pnpm](https://www.pnpm.cn/)，这是运行开发模式所必须的。
+> 如果您正在使用如 Arch Linux 系的 Linux 发行版，那么有可能出现 `Tauri` 依赖不完全安装的情况，您可能单独安装`Tauri`
+
+5. commit 并推送到您所 fork 的仓库
+
+6. 提交 Pull Request（`Pr`）到主仓库请求合并
